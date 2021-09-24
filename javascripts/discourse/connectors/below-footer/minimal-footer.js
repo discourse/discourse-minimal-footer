@@ -10,10 +10,10 @@ export default {
     }
 
     withPluginApi("0.8.7", (api) => {
-      api.decoratePluginOutlet("above-footer", (elem, args) => {
+      api.decoratePluginOutlet("below-footer", (elem, args) => {
         let headerHeight = document.querySelector(".d-header-wrap")
           .offsetHeight;
-        let footerHeight = document.querySelector(".above-footer-outlet")
+        let footerHeight = document.querySelector(".below-footer-outlet")
           .offsetHeight;
         let mainOutletStyles = getComputedStyle(
           document.querySelector("#main-outlet")
