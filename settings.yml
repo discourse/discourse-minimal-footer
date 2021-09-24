@@ -1,0 +1,34 @@
+footer_logo:
+  default: ""
+  type: upload
+
+footer_logo_url:
+  default: "/"
+
+footer_html_a:
+  default: ""
+  textarea: true
+
+footer_html_b:
+  default: ""
+  textarea: true
+  description: "Appears after the copyright"
+
+show_copyright:
+  default: true
+
+background_color:
+  default: "var(--primary)"
+
+text_color:
+  default: "var(--secondary)"
+
+max_width:
+  default: "1110px"
+  description: "To remove, use 'unset'"
+
+logo_width:
+  default: "300px"
+
+padding:
+  default: "1em"
