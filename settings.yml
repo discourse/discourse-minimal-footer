@@ -12,6 +12,10 @@ footer_html_a:
 footer_html_b:
   default: ""
   textarea: true
+
+footer_html_c:
+  default: ""
+  textarea: true
   description: "Appears after the copyright"
 
 show_copyright:

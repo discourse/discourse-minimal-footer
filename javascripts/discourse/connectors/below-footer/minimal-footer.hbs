@@ -19,13 +19,20 @@
         </p>
       {{/if}}
 
-      {{#if (or (theme-setting 'show_copyright') (theme-setting 'footer_html_b'))}}
+        {{#if (theme-setting 'footer_html_b')}}
         <p class="discourse-minimal-footer-row-b">
+          {{html-safe (theme-setting 'footer_html_b')}}
+        </p>
+      {{/if}}
+
+
+      {{#if (or (theme-setting 'show_copyright') (theme-setting 'footer_html_c'))}}
+        <p class="discourse-minimal-footer-row-c">
           {{#if (theme-setting 'show_copyright')}}
             &copy; {{theYear}}
           {{/if}}
-          {{#if (theme-setting 'footer_html_b')}}
-            {{html-safe (theme-setting 'footer_html_b')}}
+          {{#if (theme-setting 'footer_html_c')}}
+            {{html-safe (theme-setting 'footer_html_c')}}
           {{/if}}
         </p>
       {{/if}}
