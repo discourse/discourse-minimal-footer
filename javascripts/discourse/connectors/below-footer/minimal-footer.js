@@ -4,17 +4,19 @@ export default {
   setupComponent(args, component) {
     component.set("theYear", new Date().getFullYear());
     if (document.querySelector(".discourse-minimal-footer")) {
-      let footerHeight = document.querySelector(".discourse-minimal-footer")
-        .offsetHeight;
+      let footerHeight = document.querySelector(
+        ".discourse-minimal-footer"
+      ).offsetHeight;
       component.set("footerHeight", footerHeight);
     }
 
     withPluginApi("0.8.7", (api) => {
-      api.decoratePluginOutlet("below-footer", (elem, args) => {
-        let headerHeight = document.querySelector(".d-header-wrap")
-          .offsetHeight;
-        let footerHeight = document.querySelector(".below-footer-outlet")
-          .offsetHeight;
+      api.decoratePluginOutlet("below-footer", () => {
+        let headerHeight =
+          document.querySelector(".d-header-wrap").offsetHeight;
+        let footerHeight = document.querySelector(
+          ".below-footer-outlet"
+        ).offsetHeight;
         let mainOutletStyles = getComputedStyle(
           document.querySelector("#main-outlet")
         );
