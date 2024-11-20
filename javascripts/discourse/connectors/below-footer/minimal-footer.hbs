@@ -1,4 +1,4 @@
-{{#if showFooter}}
+{{#if this.showFooter}}
   <footer class="discourse-minimal-footer">
     <div class="discourse-minimal-footer-content">
       {{#if (theme-setting "footer_logo")}}
@@ -31,7 +31,7 @@
         <p class="discourse-minimal-footer-row-c">
           {{#if (theme-setting "show_copyright")}}
             &copy;
-            {{theYear}}
+            {{this.theYear}}
           {{/if}}
           {{#if (theme-setting "footer_html_c")}}
             {{html-safe (theme-setting "footer_html_c")}}
