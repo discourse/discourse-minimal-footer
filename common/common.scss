@@ -3,16 +3,20 @@
   color: $text_color;
   padding: $padding;
 }
+
 .discourse-minimal-footer-content {
   max-width: $max_width;
   margin: 0 auto;
   font-size: var(--font-down-1);
+
   @media screen and (max-width: 990px) {
     text-align: center;
   }
 }
+
 .discourse-minimal-footer-logo {
   padding: 1em 0;
+
   img {
     width: $logo_width;
   }
