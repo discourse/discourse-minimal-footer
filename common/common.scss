@@ -9,7 +9,7 @@
   margin: 0 auto;
   font-size: var(--font-down-1);
 
-  @media screen and (max-width: 990px) {
+  @media screen and (width <= 990px) {
     text-align: center;
   }
 }
