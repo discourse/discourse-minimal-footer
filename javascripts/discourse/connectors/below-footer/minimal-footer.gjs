@@ -6,7 +6,7 @@ import htmlSafe from "discourse/helpers/html-safe";
 
 const YEAR = new Date().getFullYear();
 
-const adjustMinHeight = modifierFn(() => {
+function recalculateHight() {
   const headerHeight = document.querySelector(".d-header-wrap").offsetHeight;
   const footerHeight = document.querySelector(
     ".below-footer-outlet"
@@ -23,6 +23,11 @@ const adjustMinHeight = modifierFn(() => {
     document.querySelector("#main-outlet").style.minHeight =
       "calc(100vh - " + mainOffset + "px)";
   }
+}
+
+const adjustMinHeight = modifierFn(() => {
+  recalculateHight();
+  return () => recalculateHight();
 });
 
 @classNames("below-footer-outlet", "minimal-footer")
