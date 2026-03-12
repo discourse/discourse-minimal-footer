@@ -1,8 +1,9 @@
+/* eslint-disable ember/no-classic-components, ember/require-tagless-components */
 import Component from "@ember/component";
 import { htmlSafe } from "@ember/template";
 import { classNames } from "@ember-decorators/component";
 import { modifier as modifierFn } from "ember-modifier";
-import { or } from "truth-helpers";
+import { or } from "discourse/truth-helpers";
 
 const YEAR = new Date().getFullYear();
 
